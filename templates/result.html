@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="result" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="icon" href="/static/qwe.png">
+    <link rel="stylesheet" href="/static/resultstyle.css">
+</head>
+<body>
+    <h1> PREDICTION RESULT IS ... </h1>
+    {% if data == 0%}
+    <h2>You are NOT RISKY to mental health problems</h2>
+    <img class="notrisk" src="/static/4X6MentalHealthFirstAid.jpg" alt="">
+
+    {% else %}
+    <h2>You are RISKY to mental health problems</h2>
+    <img class="risk" src="/static/ment.jpg" alt="">
+
+    {% endif %}
+    <div class="btn"><a href='/'>go back to home page</a></div>
+</body>
+</html>

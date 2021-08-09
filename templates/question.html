@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Question Form</title>
+    <link rel="icon" href="/static/wert.png">
+    <link rel="stylesheet" href="/static/questionstyle.css">
+</head>
+
+<body>
+    
+    <header class="header">
+        <h1 id="title">Mentalist Question</h1>  
+    </header>
+
+    <div class="container">
+
+        <p0 id="description">Complete the questions in order to analyze your mental health</p0>
+
+        <!--<form action="" id="question-form">-->
+        <form method="POST", action="{{ url_for('question') }}">
+
+            <!--self_employed-->
+            <div class="form-group">
+                <p1 id="self_employed">
+                    Are you self-employed?
+                    <br><br>
+                    <select name="self-employed" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="1">
+                               Yes, I am self-employed</option>
+                           <option value="0">
+                               No, I am not self-employed
+                           </option>
+                </select>
+
+                </p1>
+                
+            </div>
+
+            <!--no_of_employees-->
+            <div class="form-group">
+                <p2 id="no_of_employees">
+                    How many empoyees are there in your company?
+                    <br><br>
+                    <select name="no-of-employees" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="0">
+                               1-5</option>
+                           <option value="4">
+                               6-25
+                           </option>
+                           <option value="2">
+                               26-100</option>
+                            <option value="1">
+                               101-500
+                            </option>
+                            <option value="3">
+                               501-1000</option>
+                            <option value="5">
+                               more than 1000
+                            </option>
+                </select>
+                    
+                
+                </p2>
+                
+                
+            </div>
+
+            <!--tech_company-->
+            <div class="form-group">
+                <p3 id="tech_company">
+                    Is your company relate to IT?
+                    <br><br>
+                    <select name="tech-company" 
+                    id="dropdown"
+                    class="formControl" required>
+                       <option value="" disabled selected>
+                           Select your company current status
+                       </option>
+                       <option value="1">
+                           Yes, My company is relate to IT</option>
+                       <option value="0">
+                           No, My company is not relate to IT
+                       </option>
+                </select>
+                </p3>
+                
+            </div>
+
+            <!--mental_healthcare_coverage-->
+            <div class="form-group">
+                <p4 id="mental_healthcare_coverage">
+                    Does your employer provide mental health benefits as part of healthcare coverage?
+                    <br><br>
+                    <select name="mental-healthcare-coverage" 
+                    id="dropdown"
+                    class="formControl" required>
+                       <option value="" disabled selected>
+                           Select your current status
+                       </option>
+                       <option value="2">
+                            Yes, It does</option>
+                       <option value="1">
+                            No, It does not
+                       </option>
+                       <option value="0">
+                            I don't know
+                        </option>
+                    </select>
+                </p4>
+                
+            </div>
+
+            <!--knowledge_about_mental_healthcare_options_workplace-->
+            <div class="form-group">
+                <p5 id="knowledge_about_mental_healthcare_options_workplace">
+                    Do you know the options for mental health care available under your employer-provided coverage?
+                    <br><br>
+                    <select name="knowledge-about-mental-healthcare-options-workplace" 
+                    id="dropdown"
+                    class="formControl" required>
+                       <option value="" disabled selected>
+                           Select your current status
+                       </option>
+                       <option value="2">
+                            Yes, It does</option>
+                       <option value="1">
+                            No, It does not
+                       </option>
+                       <option value="0">
+                            I am not sure
+                        </option>
+                    </select>
+                
+                </p5>
+                
+            </div>
+
+            <!--employer_discussed_mental_health-->
+            <div class="form-group">
+                <p6 id="employer_discussed_mental_health">
+                    Has your employer ever formally discussed mental health <br>(for example, as part of a wellness campaign or other official communication)?
+                    <br><br>
+                    <select name="employer-discussed-mental-health" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+                </p6>
+                
+            </div>
+
+            <!--employer_offer_resources_to_learn_about_mental_health-->
+            <div class="form-group">
+                <p7 id="employer_offer_resources_to_learn_about_mental_health">
+                    Has your employer ever formally discussed mental health <br>(for example, as part of a wellness campaign or other official communication)?
+                    <br><br>
+                    <select name="employer-offer-resources-to-learn-about-mental-health" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+            
+                </p7>
+                
+            </div>
+
+            <!--medical_leave_from_work-->
+            <div class="form-group">
+                <p8 id="medical_leave_from_work">
+                    If a mental health issue prompted you to request a medical leave from work, asking for that leave would be:
+                    <br><br>
+                    <select name="medical-leave-from-work" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="5">
+                                Very easy   </option>
+                           <option value="3">
+                                Somewhat easy
+                           </option>
+                           <option value="1">
+                                Neither easy nor difficult
+                            </option>
+                            <option value="2">
+                                Somewhat difficult</option>
+                           <option value="4">
+                                Very difficult
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+                </p8>
+            </div>
+
+            <!--comfortable_discussing_with_coworkers-->
+            <div class="form-group">
+                <p9 id="comfortable_discussing_with_coworkers">
+                    Would you feel comfortable discussing a mental health disorder with your coworkers?
+                    <br><br>
+                    <select name="comfortable-discussing-with-coworkers" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                Maybe
+                            </option>
+                    </select>
+                </p9>
+                
+            </div>
+
+            <!--employer_take_mental_health_seriously-->
+            <div class="form-group">
+                <p10 id="employer_take_mental_health_seriously">
+                    Do you feel that your employer takes mental health as seriously as physical health?
+                    <br><br>
+                    <select name="employer-take-mental-health-seriously" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+                </p10>
+                
+            </div>
+
+            <!--openess_of_family_friends-->
+            <div class="form-group">
+                <p11 id="openess_of_family_friends">
+                    How willing would you be to share with friends and family that you have a mental illness?
+                    <br><br>
+                    <select name="openess-of-family-friends" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="5">
+                                Very open   </option>
+                           <option value="4">
+                                Somewhat open
+                           </option>
+                           <option value="1">
+                                Neutral
+                            </option>
+                            <option value="3">
+                                Somewhat not open</option>
+                           <option value="2">
+                                Not open at all
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+                </p11>
+                
+            </div>
+
+            <!--family_history_mental_illness-->
+            <div class="form-group">
+                <p12 id="family_history_mental_illness">
+                    Do you have a family history of mental illness?
+                    <br><br>
+                    <select name="family-history-mental-illness" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                I don't know
+                            </option>
+                    </select>
+                </p12>
+                
+            </div>
+
+            <!--mental_health_disorder_past-->
+            <div class="form-group">
+                <p13 id="mental_health_disorder_past">
+                    Have you had a mental health disorder in the past?
+                    <br><br>
+                    <select name="mental-health-disorder-past" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="2">
+                                Yes, It does</option>
+                           <option value="1">
+                                No, It does not
+                           </option>
+                           <option value="0">
+                                Maybe
+                            </option>
+                    </select>
+                </p13>
+                
+            </div>
+
+            <!--currently_mental_health_disorder-->
+            <div class="form-group">
+                <p14 id="currently_mental_health_disorder">
+                    Do you currently have a mental health disorder?
+                    <br><br>
+                    <select name="currently-mental-health-disorder" 
+                    id="dropdown"
+                    class="formControl" required>
+                       <option value="" disabled selected>
+                           Select your current status
+                       </option>
+                       <option value="2">
+                            Yes, It does</option>
+                       <option value="1">
+                            No, It does not
+                       </option>
+                       <option value="0">
+                            Maybe
+                        </option>
+                    </select>
+                </p14>
+                
+            </div>
+
+            <!--age อย่าลืม required ตรง placeholder-->
+            <div1 class="form-group">
+                <label for="age">How old are you?</label>
+                <br><br>
+                <input type="number" 
+                    name="age"
+                    id="age"
+                    class="formControl"
+                    placeholder="Enter your age" required>         
+            </div1>
+
+            <!--gender-->
+            <div class="form-group">
+                <p15 id="gender">
+                    What is your gender?
+                    <br><br>
+                    <select name="gender" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="0">
+                                Female</option>
+                           <option value="1">
+                                Male
+                           </option>
+                           <option value="2">
+                                Other
+                            </option>
+                    </select>
+                </p15>
+                
+            </div>
+            
+            <!--work_remotely-->
+            <div class="form-group">
+                <p16 id="work_remotely">
+                    Do you work remotely?
+                    <br><br>
+                    <select name="work-remotely" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="0">
+                                Always</option>
+                           <option value="2">
+                                Sometimes
+                           </option>
+                           <option value="1">
+                                Never
+                            </option>
+                    </select>
+                </p16>
+                
+            </div>
+
+            <!--tech_role เดี๋ยวตรงหลัง "formControl" ให้เติม required ด้วย-->
+            <div class="form-group">
+                <p17 id="tech_role">
+                    Is your role in company mainly relate to IT and technology?
+                    <br><br>
+                    <select name="tech-role" 
+                        id="dropdown"
+                        class="formControl" required>
+                           <option value="" disabled selected>
+                               Select your current status
+                           </option>
+                           <option value="1">
+                                Yes</option>
+                           <option value="0">
+                                No
+                           </option>
+                    </select>
+                </p17>
+                
+            </div>
+
+            
+            <div>
+                <button class="button" type="submit" value="predict">ANALYZE</button>
+            </div>
+            
+            
+        </form>
+    </div>
+    
+    
+</body>
+</html>
