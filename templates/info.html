@@ -5,9 +5,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info on Mental Health</title>
+    <link rel="icon" href="/static/wert.png">
+    <link rel="stylesheet" href="\static\infostyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Mood Disorder (Depression, Bipolar)',     526],
+          ['Anxiety Disorder (Social, Phobia)',      373],
+          ['Attention Deficit Hyperactivity Disorder',  134],
+          ['Post-traumatic Stress Disorder', 70],
+          ['Obsessive-Compulsive Disorder',    40],
+          ['Stress Response Syndrome', 31],
+          ['Personality Disorder (Borderline, Paranoid)', 28],
+          ['Substance User Disorder', 26],
+          ['Eating Disorder (Anorexia, Bulimia)', 18],
+          ['Addictive Disorder', 15]
+        ]);
+
+        var options = {
+          title: 'The Percentage of Occured Mental Disorders',
+          fontName: 'Nunito Sans'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Number of Employees', 'Yes', 'No', "I don't know"],
+          ['1-5', 9, 40, 11],
+          ['6-25', 52, 73, 51],
+          ['26-100', 430, 82, 101],
+          ['101-500', 127, 42, 79],
+          ['501-1000', 40, 14, 26],
+          ['more than 1000', 160, 45, 51]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Size versus Health Care Coverage',
+            subtitle: 'Relationship between number of employees and mental health care coverage',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 500,
+          width: 700,
+          colors: ['#1b9e77', '#d95f02', '#7570b3'],
+          fontSize: 14,
+          fontName: 'Nunito Sans',
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+        var btns = document.getElementById('btn-group');
+
+        btns.onclick = function (e) {
+
+          if (e.target.tagName === 'BUTTON') {
+            options.hAxis.format = e.target.id === 'none' ? '' : e.target.id;
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+          }
+        }
+      }
+    </script>
+
+    
+    <script type="text/javascript">
+        window.onscroll = function(){myfunction()};
+            function myfunction(){
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                var scroll = (winScroll/height) * 100;
+                document.getElementById("scrollBar").style.width = scroll + "%";
+            }
+    </script>
 </head>
 <body>
-    <h1>THIS IS Infooooo</h1>
+        <br><br>
+        <div class="content">
+            <div class="content_head">
+                What is Mental Health ?
+            </div>
+            <br>
+            <div class="content_text">
+                    <g0>_____</g0>Mental health includes our emotional, psychological, 
+                    and social well-being. It affects how we think, feel, 
+                    and act. It also helps determine how we handle stress, 
+                    relate to others, and make choices. Mental health is 
+                    important at every stage of life, from childhood and 
+                    adolescence through adulthood.
+                    Over the course of your life, if you experience mental 
+                    health problems, your thinking, mood, and behavior could 
+                    be affected. Many factors contribute to mental health 
+                    problems, including:
+                    <div class="content_list">
+                        <i class="bi bi-chevron-double-right"></i>Biological factors, such as genes or brain chemistry
+                        <br><i class="bi bi-chevron-double-right"></i>Life experiences, such as trauma or abuse
+                        <br><i class="bi bi-chevron-double-right"></i>Family history of mental health problems
+                    </div>
+                    <g0>_____</g0>Mental health problems are common but help is available. 
+                    People with mental health problems can get better and many recover completely.
+            </div>
+            <br><br>
+            <div class="content_head">
+                Early Warning Signs
+            </div>
+            <br>
+            <div class="content_text">
+                <g0>_____</g0>Not sure if you or someone you know is living with mental health problems? 
+                Experiencing one or more of the following feelings or behaviors can be an early warning 
+                sign of a problem:
+                <div class="content_list">
+                    <i class="bi bi-chevron-double-right"></i>Eating or sleeping too much or too little
+                    <br><i class="bi bi-chevron-double-right"></i>Pulling away from people and usual activities
+                    <br><i class="bi bi-chevron-double-right"></i>Having low or no energy
+                    <br><i class="bi bi-chevron-double-right"></i>Feeling numb or like nothing matters
+                    <br><i class="bi bi-chevron-double-right"></i>Having unexplained aches and pains
+                    <br><i class="bi bi-chevron-double-right"></i>Feeling helpless or hopeless
+                    <br><i class="bi bi-chevron-double-right"></i>Smoking, drinking, or using drugs more than usual
+                    <br><i class="bi bi-chevron-double-right"></i>Feeling unusually confused, forgetful, angry, upset, worried, or scared
+                    <br><i class="bi bi-chevron-double-right"></i>Yelling or fighting with family and friends
+                    <br><i class="bi bi-chevron-double-right"></i>Experiencing severe mood swings that cause problems in relationships
+                    <br><i class="bi bi-chevron-double-right"></i>Having persistent thoughts and memories you can't get out of your head
+                    <br><i class="bi bi-chevron-double-right"></i>Hearing voices or believing things that are not true
+                    <br><i class="bi bi-chevron-double-right"></i>Thinking of harming yourself or others
+                    <br><i class="bi bi-chevron-double-right"></i>Inability to perform daily tasks like getting to work or studying
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="edm">
+            <div class="edm_head">
+                Exploratory Data Analysis
+            </div> 
+            <br>
+            <div class="content_text">
+                <g0>_____</g0>Exploratory Data Analysis refers to the critical process of 
+                performing initial investigations on data so as to discover patterns,
+                to spot anomalies,to test hypothesis and to check assumptions with the 
+                help of summary statistics and graphical representations.
+            </div>
+
+        <br>
+        <div class="q1">
+            Which kind of discorder occur most ?
+        </div>
+        <div id="piechart" style="width: 710px; height: 400px;"></div>
+        <br>
+
+        <div class="q2">
+            Is the large company is more serious about mental health than small companies ?
+        </div>
+        <br>
+        <div id="chart_div"></div>
+        <br/>
+        </div>
+
+        <div class="header">
+            <div class="head">
+                INFORMATION ON MENTAL HEALTH DATA
+            </div>
+            <div class="progress-bar" id="scrollBar"></div>
+        </div>
+
     <div class="btn"><a href='/'>go back to home page</a></div>
 </body>
 </html>
