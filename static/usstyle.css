@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+html
+{
+    font-family: 'Nunito', sans-serif;
+    background: url(/static/pastel01.jpg);
+}
+
+body
+{
+    margin-top: -10px;
+}
+
+div.header
+{
+    background: rgba(248, 248, 248, 0.3);
+    text-align: center;
+    width: 100vh;
+    padding-inline: 100px;
+    padding-top: 12px;
+    padding-bottom: 80px;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    font-size: 20px;
+    color: rgb(66, 66, 66);
+}
+
+div.head
+{
+    letter-spacing: 5px;
+    font-weight: bolder;
+    margin-bottom: -15px;
+}
+
+div.logo
+{
+    display: grid;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.kaggleA
+{
+    width: 30%;
+    height: auto;
+}
+
+.kaggleB
+{
+    width: 30%;
+    height: auto;
+    margin-bottom: -30px;
+}
+
+.youtube
+{
+    width: 23%;
+    height: auto;
+    margin-left: 23px;
+}
+
+.spark
+{
+    width: 25%;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.udemy
+{
+    width: 26%;
+    height: auto;
+    margin-left: 17px;
+}
+
+a 
+{
+    position: relative;
+    text-decoration: none;
+    margin-bottom: -20px;
+    color: rgb(37, 37, 37);
+}
+
+div.log
+{
+    display: inline;
+    position: relative;
+}
+
+div.text
+{
+    
+    position: relative;
+    display: inline;
+    bottom: 43px;
+}
+
+div.text01
+{
+    
+    position: relative;
+    display: inline;
+    bottom: 15px;
+}
+
+div.text02
+{
+    
+    position: relative;
+    display: inline;
+    bottom: 75px;
+    margin-left: 26px;
+}
+
+div.text03
+{
+    
+    position: relative;
+    display: inline;
+    bottom: 35px;
+    margin-left: 16px;
+}
+
+div.text04
+{
+    
+    position: relative;
+    display: inline;
+    bottom: 50.5px;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+div.btn
+{
+    background: rgba(104, 104, 104, 0.5);
+    width: max-content;
+    padding: 12px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 93vh;
+    margin-top: -12vh;
+    transition: 0.5s;
+}
+
+div.btn:hover
+{
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+
+}
+
+div.btn a
+{
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.btn:hover a
+{
+    color: rgb(61, 61, 61);
+}
